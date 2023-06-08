@@ -1,0 +1,55 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+html {
+    font-family: "Roboto", "sans-serif";
+}
+
+body {
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+header {
+    background-color: gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+button {
+    border: 1px solid black;
+    background-color: white;
+    box-shadow: 2px 2px;
+    font-size: 1rem;
+    margin-left: 10rem;
+    padding: 5px 5px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(gold, gold);
+    /* background-size: width & height */
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
+}
+
+label {
+    font-size: 10rem;
+}

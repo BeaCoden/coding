@@ -1,0 +1,38 @@
+html {
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 2rem 1rem;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    height: 2rem;
+    width: 2rem;
+}
+
+label {
+    font-size: 4rem;
+}
