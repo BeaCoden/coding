@@ -22,3 +22,46 @@ img {
     max-width: 100vw;
     height: 100vh;
 }
+
+container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(79, 61, 47, 0.959);
+}
+
+.box h1 {
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(205, 203, 203, 0.656);
+    margin-bottom: 150px;
+}
+
+.quote {
+    font-size: 1.5rem;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+button {
+    margin-top: 150px;
+    padding: 1rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    background-color: rgba(165, 138, 79, 0.959);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
