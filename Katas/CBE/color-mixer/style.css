@@ -39,3 +39,20 @@ input[type="range"]#redSlider {
 input[type="range"]#greenSlider {
     accent-color: green;
 }
+
+div button {
+    display: block;
+    margin: 25px auto;
+    padding: 5px 10px;
+    border: 2px solid grey;
+    border-radius: 10px;
+    background-color: lightgray;
+    cursor: pointer;
+    color: black;
+    font-size: .75rem;
+}
+
+div button:hover {
+    background-color: grey;
+    color: white;
+}

@@ -1,10 +1,11 @@
-// Slider-Elemente aus HTML abrufen
+"use strict";
+
+// Variablen deklarieren
 const redSlider = document.getElementById("redSlider");
 const greenSlider = document.getElementById("greenSlider");
 const blueSlider = document.getElementById("blueSlider");
-
-// HTML Element header abrufen
 const header = document.querySelector("header");
+const randomColorButton = document.getElementById("randomColorButton");
 
 // Default Ausgangsfarbe body bestimmen
 document.body.style.backgroundColor = "dodgerblue";
@@ -36,10 +37,42 @@ function updateColor() {
   colorValue.textContent = color;
 }
 
-// Event Listener zu Slidern hinzufügen
+// Funktion zum Abrufen einer zufälligen Farbe
+function fetchRandomColor() {
+  fetch("https://dummy-apis.netlify.app/api/color") // API aufrufen
+    .then((response) => response.json()) // Antwort in JSON umwandeln
+    .then((data) => {
+      // Daten verarbeiten
+      const color = data.color; // Farbwert aus Daten extrahieren
+      const hexColor = `#${color}`; // Farbwert in Hex-Format umwandeln
+
+      // Hintergrundfarbe des body-Elements aktualisieren
+      document.body.style.backgroundColor = hexColor;
+
+      // Hex-Farbwert im header ausgeben
+      colorValue.textContent = hexColor;
+
+      // Slider auf die Werte der Farbe setzen
+      /// in Ganzzahl umwandeln (parseInt)
+      /// Farbwert in Dezimalwert umwandeln & extrahieren (slice)
+      /// padStart (1, 3) = Ziffern hinzufügen falls nötig
+      /// in Hexadezimalwert umwandeln (toString(16))
+      const red = parseInt(color.slice(1, 3), 16);
+      const green = parseInt(color.slice(3, 5), 16);
+      const blue = parseInt(color.slice(5, 7), 16);
+
+      // Slider auf die Werte der Farbe setzen
+      redSlider.value = red;
+      greenSlider.value = green;
+      blueSlider.value = blue;
+
+      // Slider aktualisieren
+      updateColor();
+    });
+}
+
+// Event Listener hinzufügen
+randomColorButton.addEventListener("click", fetchRandomColor);
 redSlider.addEventListener("input", updateColor);
 greenSlider.addEventListener("input", updateColor);
 blueSlider.addEventListener("input", updateColor);
-
-// Initial die Farbe aktualisieren
-updateColor();
