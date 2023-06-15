@@ -1,6 +1,4 @@
-# Description 2023-06
-
-## Color Mixer with API - Task 2
+## Color Mixer with API - Task 2 - 2023/06
 
 This kata assumes that you already implemented the [Color Mixer Kata](https://github.com/coding-bootcamps-eu/web-apps-foundation/blob/main/web-app-basics/05-color-mixer.md).
 
@@ -14,7 +12,7 @@ The color mixer should then look like [this](https://coding-katas.netlify.app/co
 
 ---
 
-### Color Mixer Task 1
+### Color Mixer - Task 1 - 2023/05
 
 Implement a web app that can mix red, green and blue into any color like this [example](https://coding-katas.netlify.app/color-mixer/).
 
