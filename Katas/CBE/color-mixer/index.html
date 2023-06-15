@@ -14,24 +14,25 @@
 <body>
     <!-- HEADER -->
     <header>
-        <label for="redSlider">r
-            <input id="redSlider" type="range" step="1" min="0" max="255" value="127">
-        </label>
-        <label for="greenSlider">g
-            <input id="greenSlider" type="range" step="1" min="0" max="255" value="127">
-        </label>
-        <label for="blueSlider">b
-            <input id="blueSlider" type="range" step="1" min="0" max="255" value="127">
-        </label>
+        <div class="slider-container">
+            <label for="redSlider">r
+                <input id="redSlider" type="range" step="1" min="0" max="255" value="127">
+            </label>
+            <label for="greenSlider">g
+                <input id="greenSlider" type="range" step="1" min="0" max="255" value="127">
+            </label>
+            <label for="blueSlider">b
+                <input id="blueSlider" type="range" step="1" min="0" max="255" value="127">
+            </label>
+        </div>
         <p id="colorValue">
-            <!-- hexadezimalzahl farbwert berechnen und ausgeben -->
+            <!-- hexadezimaler Farbwert berechnen und ausgeben -->
             #nklnk4
         </p>
     </header>
     <div class="button">
         <button id="randomColorButton">Create Color</button>
     </div>
-
 
     <!-- SCRIPT -->
     <script src="script.js"></script>
