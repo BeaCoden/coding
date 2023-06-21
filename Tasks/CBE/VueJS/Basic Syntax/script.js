@@ -4,8 +4,8 @@ Vue.createApp({
   // data ist eine Funktion, die ein Objekt zurückgibt
   data() {
     return {
-      message: "Hello Vue.js!",
-      count: 0,
+      message: "Hello Vue.js!", // message ist ein Property
+      count: 0, // count ist ein Property
     };
   },
   // methods ist ein Objekt in jeder Vue-Instanz und enthält Methoden (Funktionen)
