@@ -1,0 +1,10 @@
+let firstName = "Beatrice";
+firstName += "B";
+firstName += "e";
+firstName += "a";
+firstName += "t";
+firstName += "r";
+firstName += "i";
+firstName += "c";
+firstName += "e";
+console.log(firstName);
