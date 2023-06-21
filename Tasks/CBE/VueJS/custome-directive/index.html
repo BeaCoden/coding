@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="Bea Pitzschke">
+    <title>custome directives</title>
+</head>
+
+<body>
+    <div id="app">
+        <p>My name is
+            <span v-highlight>
+                {{ userName }}
+            </span>
+        </p>
+    </div>
+    <!-- vue script immer über js script einbinden-->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    userName: "Bea",
+                };
+            },
+            directives: {
+                highlight: {
+                    mounted(el) {
+                        el.style.backgroundColor = "yellow";
+                    }
+                }
+            }
+        });
+
+        app.mount('#app');
+    </script>
+</body>
+
+</body>
+
+</html>
