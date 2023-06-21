@@ -22,15 +22,31 @@
     </header>
     <main>
         <div class="inside">
-            <div class="card">
-                <h2>Welcome back <strong>John Doe</strong>!</h2>
+            <div class="card" id="app">
+                <h2>Welcome back <strong>{{ personName }}</strong>!</h2>
                 <p>
-                    You logged in on 1/24/2022, 12:34:25 PM<br />
+                    You logged in on {{ currentDate }}<br />
                     We wish you a pleasant day.
                 </p>
             </div>
         </div>
     </main>
+
+    <!-- Vue.js script -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    personName: 'John Doe',
+                    currentDate: new Date().toLocaleString('en-US')
+                };
+            }
+        });
+
+        app.mount('#app');
+    </script>
 </body>
+
 
 </html>
