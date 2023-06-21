@@ -8,7 +8,7 @@ Vue.createApp({
       count: 0,
     };
   },
-  // methods ist ein Objekt
+  // methods ist ein Objekt in jeder Vue-Instanz und enthält Methoden (Funktionen)
   methods: {
     // Funktionen, die aufgerufen werden können
     countUp() {
