@@ -11,7 +11,7 @@
 <body>
     <div id="app">
         <p>My name is
-            <span v-highlight>
+            <span v-highlight> <!--direktive highlight wird hier verwendet-->
                 {{ userName }}
             </span>
         </p>
@@ -25,8 +25,8 @@
                     userName: "Bea",
                 };
             },
-            directives: {
-                highlight: {
+            directives: { //direktive wird hier registriert
+                highlight: { //name der direktive
                     mounted(el) {
                         el.style.backgroundColor = "yellow";
                     }
