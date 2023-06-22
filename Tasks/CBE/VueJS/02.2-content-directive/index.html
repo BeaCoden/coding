@@ -22,18 +22,18 @@
     </header>
     <main>
         <div id="app" class="inside">
-            <h2 v-text="'Directives for Vue ' + (vueVersion - 1)">
-                Directives for Vue {{ vueVersion }}
+            <h2>
+                Directives for Vue <span v-version-highlight>{{ vueVersion }}</span>
             </h2>
-            <div class="intro" v-text="text"></div>
+            <div class="intro" v-html="text"></div>
             <p>
                 Sometimes v-text is better than {{ 'Some text' }} or
-                {{myDataProperty}}
+                {{ myDataProperty }}
             </p>
         </div>
     </main>
     <script src="https://unpkg.com/vue@next"></script>
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
