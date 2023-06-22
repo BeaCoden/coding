@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8" />
+ <meta
+  http-equiv="X-UA-Compatible"
+  content="IE=edge"
+ />
+ <meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+ />
+ <meta
+  name="Author"
+  content="Bea Pitzschke"
+ >
+ <title>conditional rendering</title>
+ <link
+  rel="stylesheet"
+  href="style.css"
+ />
+</head>
+
+<body>
+ <header class="header">
+  <section class="header__section">
+   <p class="header__task-name">💻 Coding Task</p>
+   <p class="header__bootcamp-info-wrapper">
+    <span class="header__bootcamp-modul"><strong>Modul:</strong> Web Apps with Vue.js - Part 1</span>
+    <a
+     href="https://www.coding-bootcamps.eu/"
+     class="header__bootcamp-link"
+    >coding-bootcamps.eu</a>
+   </p>
+  </section>
+ </header>
+ <main>
+  <div
+   id="app"
+   class="inside"
+  >
+   <h1>My Books</h1>
+   <table>
+    <tbody>
+     <!-- v-for und :key sind für die Iteration über die Bücher -->
+     <tr
+      v-for="book in books"
+      :key="book.isbn"
+     >
+      <!-- {{ }} fügt den Wert der Variable ein -->
+      <td>{{ book.title }}</td>
+      <td>{{ book.isbn }}</td>
+      <td>{{ book.author }}</td>
+      <td>{{ book.publisher }}</td>
+      <td>{{ book.price }}</td>
+      <td>{{ book.numPages }}</td>
+     </tr>
+    </tbody>
+
+    <tr>
+     <td>High Performance Mobile Web</td>
+     <td>9781491912553</td>
+     <td>Maximiliano Firtman</td>
+     <td>O'Reilly Media</td>
+     <td>$7.00</td>
+     <td>326</td>
+    </tr>
+    </tbody>
+   </table>
+  </div>
+ </main>
+ <script src="https://unpkg.com/vue@next"></script>
+ <script src="script.js"></script>
+</body>
+
+</html>
