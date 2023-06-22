@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Author" content="Bea Pitzschke">
+    <title>Task - Attribute Binding</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header class="header">
+        <section class="header__section">
+            <p class="header__task-name">💻 Coding Task</p>
+            <p class="header__bootcamp-info-wrapper">
+                <span class="header__bootcamp-modul"><strong>Modul:</strong> Web Apps with Vue.js - Part 1</span>
+                <a href="https://www.coding-bootcamps.eu/" class="header__bootcamp-link">coding-bootcamps.eu</a>
+            </p>
+        </section>
+    </header>
+    <main>
+        <div id="app" class="inside">
+            <h1>{{ headline }}</h1>
+            <p>
+                Directives are special attributes with the <code>v-</code> prefix.
+                Directive attribute values are expected to be
+                <strong>a single JavaScript expression</strong> (with the exception of
+                <code>v-for</code> and <code>v-on</code>, which will be discussed
+                later). A directive's job is to reactively apply side effects to the
+                DOM when the value of its expression changes. Let's review the example
+                we saw in the introduction:
+            </p>
+        </div>
+        <img />
+    </main>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
