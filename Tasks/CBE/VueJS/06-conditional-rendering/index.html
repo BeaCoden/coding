@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="Author" content="Bea Pitzschke">
+ <title>conditional rendering</title>
+ <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+ <header class="header">
+  <section class="header__section">
+   <p class="header__task-name">💻 Coding Task</p>
+   <p class="header__bootcamp-info-wrapper">
+    <span class="header__bootcamp-modul"><strong>Modul:</strong> Web Apps with Vue.js - Part 1</span>
+    <a href="https://www.coding-bootcamps.eu/" class="header__bootcamp-link">coding-bootcamps.eu</a>
+   </p>
+  </section>
+ </header>
+ <main>
+  <div id="app" class="inside">
+   <div class="tab-box">
+    <nav class="tab-box__nav">
+     <button class="tab-box__nav-item">Tab 1</button>
+     <button class="tab-box__nav-item">Tab 2</button>
+     <button class="tab-box__nav-item">Tab 3</button>
+    </nav>
+    <div class="tab-box__content tab-box tab-box__content--active">
+     <section class="tab-box__content-item">
+      <h2>Content 1</h2>
+      <p>This is the content of Tab 1.</p>
+     </section>
+     <section class="tab-box__content-item">
+      <h2>Content 2</h2>
+      <p>This is the content of Tab 2.</p>
+     </section>
+     <section class="tab-box__content-item">
+      <h2>Content 3</h2>
+      <p>This is the content of Tab 3.</p>
+     </section>
+    </div>
+   </div>
+  </div>
+ </main>
+ <script src="https://unpkg.com/vue@next"></script>
+ <script src="script.js"></script>
+</body>
+
+</html>
