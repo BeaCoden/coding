@@ -23,19 +23,27 @@
   <main>
     <div id="app" class="inside">
       <nav>
-        <button class="btn btn-a">A</button>
-        <button class="btn btn-b">B</button>
-        <button class="btn btn-c">C</button>
+        <!-- v-bind:class bindet Klassen basierend auf Bedingung
+          Prüfung ob activeLetter gleich entsprechenden Buchstaben ist (z.B. 'A')
+          Wenn  Bedingung erfüllt wird Klasse 'btn-active' zugefügt um aktiven Button zu markieren -->
+        <!-- v-on:click = bei Klick auf Button wird Funktion ausgeführt -->
+        <button class="btn btn-a" v-bind:class="{ 'btn-active': activeLetter === 'A' }"
+          v-on:click="activeLetter = 'A'">A</button>
+        <button class="btn btn-b" v-bind:class="{ 'btn-active': activeLetter === 'B' }"
+          v-on:click="activeLetter = 'B'">B</button>
+        <button class="btn btn-c" v-bind:class="{ 'btn-active': activeLetter === 'C' }"
+          v-on:click="activeLetter = 'C'">C</button>
       </nav>
       <main>
-        <div class="letter letter-a">A</div>
-        <div class="letter letter-b">B</div>
-        <div class="letter letter-c">C</div>
+        <div class="letter letter-a" v-bind:class="{ 'letter-active': activeLetter === 'A' }">A</div>
+        <div class="letter letter-b" v-bind:class="{ 'letter-active': activeLetter === 'B' }">B</div>
+        <div class="letter letter-c" v-bind:class="{ 'letter-active': activeLetter === 'C' }">C</div>
       </main>
     </div>
   </main>
   <script src="https://unpkg.com/vue@next"></script>
   <script src="script.js"></script>
 </body>
+
 
 </html>
