@@ -22,10 +22,12 @@
   </header>
   <main>
     <div id="app" class="inside">
+      <!-- v-once beudeutet, dass der Wert nur einmal gerendert wird und nicht mehr geändert werden kann. -->
       <h2 v-once="'Directives for Vue ' + (vueVersion - 1)">
         Directives for Vue {{ vueVersion }}
       </h2>
       <div class="intro" v-html="text"></div>
+      <!-- v-pre beudeutet dass der Wert nicht mehr gerendert wird und nicht mehr geändert werden kann. -->
       <p v-pre>Sometimes v-text is better than {{ 'Some text' }} or {{myDataProperty}}
       </p>
     </div>

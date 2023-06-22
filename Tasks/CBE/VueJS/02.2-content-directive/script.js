@@ -6,8 +6,10 @@ Vue.createApp({
     };
   },
   mounted() {
+    // mounted ist ein Lifecycle-Hook (https://v3.vuejs.org/guide/instance.html#lifecycle-hooks)
     setInterval(() => {
-      this.vueVersion;
+      // setInterval bedeutet, dass die Funktion alle 2 Sekunden ausgeführt wird
+      this.vueVersion; // this bezieht sich auf die Vue-Instanz
     }, 2000);
   },
 }).mount("#app");
