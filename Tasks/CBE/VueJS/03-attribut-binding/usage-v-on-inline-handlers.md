@@ -31,4 +31,4 @@ Vue supports any native javascript event. E. g. `v-on:change`, `v-on:input`, `v-
 
 ---
 
-This learning material was copied from https://github.com/coding-bootcamps-eu/web-apps-with-vuejs/tree/main/material/usage-of-v-on-inline-handlers by Joe Ray Gregory
+This learning material was copied from <https://github.com/coding-bootcamps-eu/web-apps-with-vuejs/tree/main/material/usage-of-v-on-inline-handlers> by Joe Ray Gregory
