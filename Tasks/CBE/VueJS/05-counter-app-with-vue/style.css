@@ -1,0 +1,67 @@
+html {
+ box-sizing: border-box;
+ font-size: 24px;
+ font-family: monospace;
+}
+
+::selection {
+ background-color: transparent;
+}
+
+*,
+*:before,
+*:after {
+ box-sizing: inherit;
+}
+
+html,
+body {
+ height: 100%;
+ margin: 0;
+}
+
+#app {
+ margin: 0;
+ height: 100%;
+ display: grid;
+ grid-template-rows: auto 1fr;
+}
+
+header {
+ background-color: gold;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 1rem;
+}
+
+h1 {
+ margin: 0;
+}
+
+button {
+ cursor: pointer;
+ border: 2px solid black;
+ background-color: white;
+ box-shadow: 3px 3px 0 white;
+ font-size: 1rem;
+ padding: 0.25rem 0.5rem;
+}
+
+button:active {
+ box-shadow: none;
+}
+
+main {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background-image: linear-gradient(gold, gold);
+ background-size: var(--counter, 0%) 100%;
+ background-repeat: no-repeat;
+ transition: 0.25s background-size ease-in-out;
+}
+
+label {
+ font-size: 5rem;
+}

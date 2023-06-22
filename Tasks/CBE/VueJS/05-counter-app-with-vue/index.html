@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="Author" content="Bea Pitzschke">
+ <title>Task - counter app with vue</title>
+ <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+ <div id="app" class="inside">
+  <header>
+   <div>
+    <h1>Counter</h1>
+    <small>(click the white area)</small>
+   </div>
+   <button>Reset</button>
+  </header>
+  <main v-on:click="count++" :style="`--counter: ${count}%`">
+   <label id="counter">{{ count }}</label>
+  </main>
+ </div>
+ <script src="https://unpkg.com/vue@next"></script>
+ <script src="script.js"></script>
+</body>
+
+</html>
