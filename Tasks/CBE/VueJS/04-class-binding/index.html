@@ -27,6 +27,8 @@
           Prüfung ob activeLetter gleich entsprechenden Buchstaben ist (z.B. 'A')
           Wenn  Bedingung erfüllt wird Klasse 'btn-active' zugefügt um aktiven Button zu markieren -->
         <!-- v-on:click = bei Klick auf Button wird Funktion ausgeführt -->
+        <!-- btn-active ist eine Klasse aus style.css -->
+        <!-- activeLetter ist ein Data-Property aus script.js -->
         <button class="btn btn-a" v-bind:class="{ 'btn-active': activeLetter === 'A' }"
           v-on:click="activeLetter = 'A'">A</button>
         <button class="btn btn-b" v-bind:class="{ 'btn-active': activeLetter === 'B' }"
@@ -35,6 +37,7 @@
           v-on:click="activeLetter = 'C'">C</button>
       </nav>
       <main>
+        <!-- letter-active ist eine Klasse aus style.css -->
         <div class="letter letter-a" v-bind:class="{ 'letter-active': activeLetter === 'A' }">A</div>
         <div class="letter letter-b" v-bind:class="{ 'letter-active': activeLetter === 'B' }">B</div>
         <div class="letter letter-c" v-bind:class="{ 'letter-active': activeLetter === 'C' }">C</div>
