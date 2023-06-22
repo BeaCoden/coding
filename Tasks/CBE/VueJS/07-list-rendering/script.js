@@ -3,6 +3,7 @@ Vue.createApp({
   return {
    books: [
     {
+     // data properties
      title: "Practical Rust Web Projects",
      isbn: "9781484265888",
      author: "Shing Lyu",

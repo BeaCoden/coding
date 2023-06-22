@@ -43,12 +43,12 @@
    <h1>My Books</h1>
    <table>
     <tbody>
-     <!-- v-for und :key sind für die Iteration über die Bücher -->
+     <!-- v-for und :key sind für die Iteration in array -->
      <tr
       v-for="book in books"
       :key="book.isbn"
      >
-      <!-- {{ }} fügt den Wert der Variable ein -->
+      <!-- {{ }} fügt den Wert der data property ein -->
       <td>{{ book.title }}</td>
       <td>{{ book.isbn }}</td>
       <td>{{ book.author }}</td>
