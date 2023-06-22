@@ -17,14 +17,21 @@
     <h1>Counter</h1>
     <small>(click the white area)</small>
    </div>
-   <button>Reset</button>
+   <!-- v-on:click ist Eventlistener mit count = 0 als Funktion -->
+   <button v-on:click="count = 0">Reset</button>
   </header>
+  <!-- v-on:click ist Eventlistener mit count++ als Funktion -->
+  <!-- :style ist ein Binding, das den Wert von count als  CSS Custom Property --counter übergibt -->
+  <!-- --counter wird verwendet um Hintergrundwert des <main>-Elements dynamisch zu setzen -->
+  <!-- ${count}% bedeutet, dass der Wert von count als Prozentwert gesetzt wird -->
   <main v-on:click="count++" :style="`--counter: ${count}%`">
    <label id="counter">{{ count }}</label>
   </main>
  </div>
+
  <script src="https://unpkg.com/vue@next"></script>
  <script src="script.js"></script>
+
 </body>
 
 </html>
