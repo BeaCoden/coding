@@ -7,7 +7,12 @@ Vue.createApp({
  },
  computed: {
   fullName() {
-   return `${this.firstName} ${this.lastName}`;
+   return generateFullName(this.firstName, this.lastName);
+  },
+ },
+ methods: {
+  generateFullName(firstname, lastname) {
+   return `${firstname} ${lastname}`;
   },
  },
 }).mount("#app");
