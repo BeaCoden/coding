@@ -2,106 +2,88 @@
 <html lang="en">
 
 <head>
- <meta charset="UTF-8" />
- <meta
-  http-equiv="X-UA-Compatible"
-  content="IE=edge"
- />
- <meta
-  name="viewport"
-  content="width=device-width, initial-scale=1.0"
- />
- <meta
-  name="Author"
-  content="Bea Pitzschke"
- >
- <title>conditional rendering</title>
- <link
-  rel="stylesheet"
-  href="style.css"
- />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible"
+        content="IE=edge" />
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0" />
+  <meta name="Author"
+        content="Bea Pitzschke">
+  <title>conditional rendering</title>
+  <link rel="stylesheet"
+        href="style.css" />
 </head>
 
 <body>
- <header class="header">
-  <section class="header__section">
-   <p class="header__task-name">💻 Coding Task</p>
-   <p class="header__bootcamp-info-wrapper">
-    <span class="header__bootcamp-modul"><strong>Modul:</strong> Web Apps with Vue.js - Part 1</span>
-    <a
-     href="https://www.coding-bootcamps.eu/"
-     class="header__bootcamp-link"
-    >coding-bootcamps.eu</a>
-   </p>
-  </section>
- </header>
-
- <body>
   <header class="header">
-   <!-- Header-Inhalt -->
+    <section class="header__section">
+      <p class="header__task-name">💻 Coding Task</p>
+      <p class="header__bootcamp-info-wrapper">
+        <span class="header__bootcamp-modul"><strong>Modul:</strong> Web Apps with Vue.js - Part 1</span>
+        <a href="https://www.coding-bootcamps.eu/"
+           class="header__bootcamp-link">coding-bootcamps.eu</a>
+      </p>
+    </section>
   </header>
-  <main>
-   <div
-    id="app"
-    class="inside"
-   >
-    <div class="tab-box">
-     <!-- Teil 1: Tab-Navigation -->
-     <nav class="tab-box__nav">
-      <!-- button mit den bindungen für die Klasse und den Event-Handler -->
-      <!-- class="tab-box__nav-item" setzt die Klasse für alle Elemente -->
-      <!-- v-for="(tab, index) in tabs" iteriert über das Array tabs bzw. um alle Tabs zu durchlaufen & entsprechenden Buttons zu rendern -->
-      <!-- :key="index" setzt den Schlüssel für alle Elemente -->
-      <!-- @click="changeTab(index)" setzt den Event-Handler für alle Elemente -->
-      <!-- :class="{ 'tab-box__nav-item--active': activeTab === index }" setzt die Klasse für alle Elemente -->
-      <button
-       class="tab-box__nav-item"
-       v-for="(tab, index) in tabs"
-       :key="index"
-       @click="changeTab(index)"
-       :class="{ 'tab-box__nav-item--active': activeTab === index }"
-      >
-       <!--  {{ tab.name }} setzt den Text für alle Elemente -->
-       {{ tab.name }}
-      </button>
-     </nav>
 
-     <!-- Teil 2: Tab-Inhalte -->
-     <div class="tab-box__content">
-      <!-- template ist ein Platzhalter für den Inhalt der Komponente -->
-      <!-- v-for="(tab, index) in tabs" iteriert über das Array tabs -->
-      <template v-for="(tab, index) in tabs">
+  <body>
+    <header class="header">
+      <!-- Header-Inhalt -->
+    </header>
+    <main>
+      <div id="app"
+           class="inside">
+        <div class="tab-box">
+          <!-- Teil 1: Tab-Navigation -->
+          <nav class="tab-box__nav">
+            <!-- button mit den bindungen für die Klasse und den Event-Handler -->
+            <!-- class="tab-box__nav-item" setzt die Klasse für alle Elemente -->
+            <!-- v-for="(tab, index) in tabs" iteriert über das Array tabs bzw. um alle Tabs zu durchlaufen & entsprechenden Buttons zu rendern -->
+            <!-- :key="index" setzt den Schlüssel für alle Elemente -->
+            <!-- @click="changeTab(index)" setzt den Event-Handler für alle Elemente -->
+            <!-- :class="{ 'tab-box__nav-item--active': activeTab === index }" setzt die Klasse für alle Elemente -->
+            <button class="tab-box__nav-item"
+                    v-for="(tab, index) in tabs"
+                    :key="index"
+                    @click="changeTab(index)"
+                    :class="{ 'tab-box__nav-item--active': activeTab === index }">
+              <!--  {{ tab.name }} setzt den Text für alle Elemente -->
+              {{ tab.name }}
+            </button>
+          </nav>
 
-       <!-- Teil 2.1: Aktiver Tab -->
-       <!-- section mit den bindungen für die Klasse und den Event-Handler -->
-       <!-- class="tab-box__content-item" setzt die Klasse für alle Elemente -->
-       <!-- :key="index" setzt den Schlüssel für alle Elemente -->
-       <!-- v-if="activeTab === index" setzt die Bedingung für alle Elemente & sorgt dafür das nur Inhalt des aktiven Tabs gerendert-->
-       <section
-        class="tab-box__content-item"
-        :key="index"
-        v-if="activeTab === index"
-       >
-        <h2>{{ tab.name }}</h2>
-        <p>{{ tab.content }}</p>
-       </section>
-      </template>
+          <!-- Teil 2: Tab-Inhalte -->
+          <div class="tab-box__content">
+            <!-- template ist ein Platzhalter für den Inhalt der Komponente -->
+            <!-- v-for="(tab, index) in tabs" iteriert über das Array tabs -->
+            <template v-for="(tab, index) in tabs">
 
-      <!-- Teil 2.2: Excuse-Fallback -->
-      <!-- v-if="activeTab === index" sorgt dafür, dass nur der Inhalt des aktiven Tabs gerendert wird -->
-      <section
-       class="tab-box__content-item"
-       v-if="activeTab >= tabs.length"
-      >
-       <h2>Excuse</h2>
-       <p>Sorry, no content available for this tab.</p>
-      </section>
-     </div>
-    </div>
-   </div>
-  </main>
-  <script src="https://unpkg.com/vue@next"></script>
-  <script src="script.js"></script>
- </body>
+              <!-- Teil 2.1: Aktiver Tab -->
+              <!-- section mit den bindungen für die Klasse und den Event-Handler -->
+              <!-- class="tab-box__content-item" setzt die Klasse für alle Elemente -->
+              <!-- :key="index" setzt den Schlüssel für alle Elemente -->
+              <!-- v-if="activeTab === index" setzt die Bedingung für alle Elemente & sorgt dafür das nur Inhalt des aktiven Tabs gerendert-->
+              <section class="tab-box__content-item"
+                       :key="index"
+                       v-if="activeTab === index">
+                <h2>{{ tab.name }}</h2>
+                <p>{{ tab.content }}</p>
+              </section>
+            </template>
+
+            <!-- Teil 2.2: Excuse-Fallback -->
+            <!-- v-if="activeTab === index" sorgt dafür, dass nur der Inhalt des aktiven Tabs gerendert wird -->
+            <section class="tab-box__content-item"
+                     v-if="activeTab >= tabs.length">
+              <h2>Excuse</h2>
+              <p>Sorry, no content available for this tab.</p>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="script.js"></script>
+  </body>
 
 </html>
