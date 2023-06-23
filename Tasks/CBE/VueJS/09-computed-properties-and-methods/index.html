@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible"
+        content="IE=edge" />
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0" />
+  <meta name="Author"
+        content="Your Name">
+  <link rel="stylesheet"
+        href="style.css" />
+  <title>Computed Properties and Methods</title>
+</head>
+
+<body>
+  <header class="header">
+    <section class="header__section">
+      <p class="header__task-name">💻 Coding Task</p>
+      <p class="header__bootcamp-info-wrapper">
+        <span class="header__bootcamp-modul"><strong>Modul:</strong> Computed Properties and Methods</span>
+        <a href="https://www.coding-bootcamps.eu/"
+           class="header__bootcamp-link">coding-bootcamps.eu</a>
+      </p>
+    </section>
+  </header>
+  <main>
+    <div id="app"
+         class="inside">
+      <h1>20% off on all books from O'Reilly Media</h1>
+      <table>
+        <thead>
+          <tr>
+            <th v-for="columnName in bookKeys"
+                :key="columnName">
+              {{ columnName }}
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="book in oReillyBooks"
+              :key="book.isbn">
+            <!-- <td>{{ book.id }}</td> -->
+            <td>{{ book.title }}</td>
+            <!-- <td>{{ book.subtitle }}</td> -->
+            <td>{{ book.isbn }}</td>
+
+            <!-- <td>{{ book.abstract }}</td> -->
+            <td>{{ book.author }}</td>
+            <td>{{ book.publisher }}</td>
+            <td>{{ calculateDiscountedPrice(book.price) }}</td>
+            <td>{{ book.numPages }}</td>
+            <!-- <td>{{ isBookmarked }}</td> -->
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <script src="https://unpkg.com/vue@3"></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
