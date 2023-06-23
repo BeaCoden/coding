@@ -544,6 +544,26 @@ Vue.createApp({
    ],
   };
  },
- computed: {},
- methods: {},
+ computed: {
+  bookKeys() {
+   // es wird das objekt mit dem index 0 genommen und davon die keys
+   // this ist das objekt das in data definiert ist und books ist das array
+   return Object.keys(this.books[0]);
+  },
+  oReillyBooks() {
+   // filter methode nimmt ein array und gibt ein neues array zurück mit den elementen die true sind
+   return this.books.filter((book) => {
+    return book.publisher === "O'Reilly Media";
+   });
+  },
+ },
+
+ methods: {
+  calculateDiscountedPrice(price) {
+   // formel für den rabatt
+   //const highPrice =
+   //const lowPrice = highPrice
+   return price;
+  },
+ },
 }).mount("#app");

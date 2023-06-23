@@ -33,26 +33,22 @@
         <thead>
           <tr>
             <th v-for="columnName in bookKeys"
-                :key="columnName">
-              {{ columnName }}
-            </th>
+                :key="columnName">{{ columnName }}</th>
           </tr>
         </thead>
         <tbody>
           <tr v-for="book in oReillyBooks"
-              :key="book.isbn">
-            <!-- <td>{{ book.id }}</td> -->
+              :key="book.id">
+            <td>{{ book.id }}</td>
             <td>{{ book.title }}</td>
-            <!-- <td>{{ book.subtitle }}</td> -->
+            <td>{{ book.subtitle }}</td>
             <td>{{ book.isbn }}</td>
-
-            <!-- <td>{{ book.abstract }}</td> -->
+            <td>{{ book.abstract }}</td>
             <td>{{ book.author }}</td>
             <td>{{ book.publisher }}</td>
             <td>{{ calculateDiscountedPrice(book.price) }}</td>
             <td>{{ book.numPages }}</td>
-            <!-- <td>{{ isBookmarked }}</td> -->
-
+            <td>{{ book.isBookmarked }}</td>
           </tr>
         </tbody>
       </table>
@@ -61,7 +57,6 @@
 
   <script src="https://unpkg.com/vue@3"></script>
   <script src="script.js"></script>
-
 </body>
 
 </html>
